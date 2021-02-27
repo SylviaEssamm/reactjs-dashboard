@@ -5,7 +5,7 @@ import useLocalStorage from "react-use-localstorage";
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
-  UserOutlined,
+  ShoppingOutlined,
 } from "@ant-design/icons";
 import { useHistory } from "react-router-dom";
 const { Header, Sider, Content } = Layout;
@@ -31,7 +31,7 @@ const Container = ({ children }) => {
         <Sider trigger={null} collapsible collapsed={isCollapsed}>
           <div className="logo" />
           <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
-            <Menu.Item key="1" icon={<UserOutlined />} active={true}>
+            <Menu.Item key="1" icon={<ShoppingOutlined />} active={true}>
               Products
             </Menu.Item>
           </Menu>

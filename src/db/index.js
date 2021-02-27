@@ -52,8 +52,7 @@ const mockAPI = () => {
       });
       this.post("/login", (_, b) => {
         const body = JSON.parse(b.requestBody);
-        console.log(body);
-        let isExist = users.find((user) => {
+        const isExist = users.find((user) => {
           return (
             user.username === body.username && user.password === body.password
           );

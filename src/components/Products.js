@@ -5,7 +5,6 @@ import FilterBox from "./FilterBox";
 import Layout from "./Layout";
 
 const filterReducer = (filter, action) => {
-  console.log(action);
   switch (action.type) {
     case "SET_AVAILABLE_STATUS": {
       return {
