@@ -42,7 +42,7 @@ const FilterBox = ({ dispatch, filter, onSearch }) => {
         Only Available Products
       </Checkbox>
       <div className="spacer-20"></div>
-      <div>
+      <div class="price_slider">
         <label>Price: </label>
         <Slider
           value={[filter.price.min, filter.price.max]}
@@ -52,9 +52,7 @@ const FilterBox = ({ dispatch, filter, onSearch }) => {
             100: "$100",
           }}
           step={0.1}
-          disabled={false}
-          trackStyle={false}
-          tooltipVisible={true}
+          tooltipVisible={false}
           tooltipPlacement={"top"}
           tipFormatter={(value) => <span>${value}</span>}
           onChange={onChangePriceRange}

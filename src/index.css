@@ -75,7 +75,7 @@ body {
   padding: 20px;
 }
 .filter {
-  background: #0b1b2d;
+  background: #002366;
   padding: 20px;
   border-radius: 5px;
   color: white;
@@ -119,4 +119,22 @@ body {
 }
 .ant-card-cover {
   padding: 20px;
+}
+.ant-slider-mark-text {
+  color: white !important;
+}
+.price_slider {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.price_slider label {
+  margin-right: 30px;
+  height: fit-content;
+  padding-top: 5px;
+}
+.price_slider .ant-slider {
+  flex: 1;
+  max-width: 300px;
+  height: fit-content;
 }
