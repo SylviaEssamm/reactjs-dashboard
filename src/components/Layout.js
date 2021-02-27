@@ -24,7 +24,7 @@ const Container = ({ children }) => {
     if (isLogged === "false") {
       history.push("/login");
     }
-  }, [isLogged]);
+  }, [isLogged, history]);
   if (isLogged === "true") {
     return (
       <Layout>
