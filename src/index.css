@@ -1,13 +1,81 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #ebecef !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.login {
+  background-color: #ffffff;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  max-height: 300px;
+  max-width: 600px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.login_form {
+  margin-top: 20px;
+}
+.price_standard {
+  color: green;
+}
+
+.price.has_discount .price_standard {
+  text-decoration: line-through;
+  color: #acacaf;
+}
+.price_discount {
+  color: #e7114e;
+  margin-left: 10px;
+}
+
+.products {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  row-gap: 30px;
+}
+.ant-card-meta-title {
+  text-overflow: none !important ;
+  white-space: pre-wrap !important;
+}
+
+.badge {
+  background-color: #2dc5f3;
+  border-radius: 20px;
+  padding: 5px 15px;
+  color: white;
+  font-size: 10px;
+  margin-top: 12px;
+  display: flex;
+  max-width: fit-content;
+}
+
+.badge span:first-child {
+  margin-right: 4.5px;
+}
+.badge.expired {
+  background-color: #ee5b5b;
+}
+
+.product {
+  padding: 10px 0px !important;
+}
+.ant-card-body {
+  padding: 12px !important;
+}
+
+.products_page {
+  padding: 20px;
+}
+.filter {
+  background: #f5fffa;
+  padding: 20px;
+  border-radius: 5px;
 }
