@@ -25,14 +25,23 @@ const FilterBox = ({ dispatch, filter, onSearch }) => {
   return (
     <div className="filter">
       <Input
-        className="Search"
+        className="search"
         placeholder="Find Products"
         value={filter.search}
         onChange={onKeywordChange}
       />
-      <Checkbox checked={filter.availableOnly} onChange={onChangeStatus}>
+      <div className="spacer-20"></div>
+
+      <Checkbox
+        checked={filter.availableOnly}
+        onChange={onChangeStatus}
+        style={{
+          color: "white",
+        }}
+      >
         Only Available Products
       </Checkbox>
+      <div className="spacer-20"></div>
       <div>
         <label>Price: </label>
         <Slider
@@ -51,7 +60,9 @@ const FilterBox = ({ dispatch, filter, onSearch }) => {
           onChange={onChangePriceRange}
         />
       </div>
-      <Button onClick={onSearch}>Search</Button>
+      <Button onClick={onSearch} type="primary">
+        Search
+      </Button>
     </div>
   );
 };

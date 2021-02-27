@@ -2,6 +2,7 @@ import "antd/dist/antd.min.css";
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/Login";
 import Products from "./components/Products";
+import Layout from "./components/Layout";
 function App() {
   return (
     <Router>

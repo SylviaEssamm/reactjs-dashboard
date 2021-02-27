@@ -3,6 +3,7 @@ import Product from "../components/Product";
 import { getProducts, searchProducts } from "../services/api";
 import { Dropdown, Menu } from "antd";
 import FilterBox from "./FilterBox";
+import Layout from "./Layout";
 
 const filterReducer = (filter, action) => {
   console.log(action);
@@ -51,19 +52,21 @@ const Products = () => {
     });
   }, []);
   return (
-    <div className="products_page">
-      <FilterBox
-        dispatch={filterDispatch}
-        filter={filter}
-        onSearch={onSearch}
-      />
+    <Layout>
+      <div className="products_page">
+        <FilterBox
+          dispatch={filterDispatch}
+          filter={filter}
+          onSearch={onSearch}
+        />
 
-      <div className="products">
-        {products.map((product) => (
-          <Product {...product} />
-        ))}
+        <div className="products">
+          {products.map((product) => (
+            <Product {...product} />
+          ))}
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
