@@ -2,6 +2,14 @@ import axios from "axios";
 const client = axios.create({
   baseURL: "/api",
 });
+client.interceptors.request.use((r) => {
+  window.NProgress.start();
+  return r;
+});
+client.interceptors.response.use((r) => {
+  window.NProgress.done();
+  return r;
+});
 
 export const getProducts = async () => {
   return client.get("/products").then(({ data }) => data);

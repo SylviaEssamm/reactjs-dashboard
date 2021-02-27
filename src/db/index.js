@@ -11,7 +11,7 @@ const mockAPI = () => {
           return products;
         },
         {
-          timing: 1000,
+          timing: 300,
         }
       );
       this.post("/products/search", (_, b) => {

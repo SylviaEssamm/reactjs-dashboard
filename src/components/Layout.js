@@ -35,7 +35,7 @@ const Container = ({ children }) => {
               onClick: toggle,
             }
           )}
-          <Button onClick={() => history.push("/login")}>Logout</Button>
+          <Button onClick={() => history.push("/login")}>Log out</Button>
         </Header>
         <Content
           className="site-layout-background"

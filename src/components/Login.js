@@ -3,42 +3,34 @@ import { Form, Input, Button } from "antd";
 import { Typography } from "antd";
 import { login } from "../services/api";
 import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 const Login = () => {
   const router = useHistory();
   const onFinish = (values) => {
-    console.log("Success:", values);
     login(values).then(({ data: { isSuccess } }) => {
       if (isSuccess) {
+        toast.success("Login successfully");
         router.push("/products");
+      } else {
+        toast.error("Username or password is incorrect!");
       }
     });
   };
-
-  const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
-  };
   return (
     <div className="login">
-      <Typography.Title
-        style={{
-          marginBottom: "5px",
-        }}
-      >
-        Login
-      </Typography.Title>
+      <Typography.Title className="login_title">Welcome!</Typography.Title>
       <Typography.Text
         style={{
           color: "#9FA5AF",
         }}
       >
-        Sign In to your account
+        Sign in to your account
       </Typography.Text>
       <div class="login_form">
         <Form
           name="basic"
           initialValues={{ remember: true }}
           onFinish={onFinish}
-          onFinishFailed={onFinishFailed}
         >
           <Form.Item
             label="username"
@@ -49,7 +41,7 @@ const Login = () => {
           </Form.Item>
 
           <Form.Item
-            label="passowrd"
+            label="password"
             name="password"
             rules={[{ required: true, message: "Please input your password!" }]}
           >
