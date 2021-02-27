@@ -55,7 +55,7 @@ const mockAPI = () => {
         console.log(body);
         let isExist = users.find((user) => {
           return (
-            user.username == body.username && user.password == body.password
+            user.username === body.username && user.password === body.password
           );
         });
 

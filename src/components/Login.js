@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Input, Button, Checkbox } from "antd";
+import { Form, Input, Button } from "antd";
 import { Typography } from "antd";
 import { login } from "../services/api";
 import { useHistory } from "react-router-dom";

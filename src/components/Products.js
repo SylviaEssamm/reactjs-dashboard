@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useReducer } from "react";
 import Product from "../components/Product";
 import { getProducts, searchProducts } from "../services/api";
-import { Dropdown, Menu } from "antd";
 import FilterBox from "./FilterBox";
 import Layout from "./Layout";
 
