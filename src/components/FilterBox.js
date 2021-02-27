@@ -49,9 +49,12 @@ const FilterBox = ({ dispatch, filter, onSearch }) => {
           range
           marks={{
             0: "$0",
+            25: "$25",
+            50: "$50",
+            75: "$70",
             100: "$100",
           }}
-          step={0.1}
+          step={25}
           tooltipVisible={false}
           tooltipPlacement={"top"}
           tipFormatter={(value) => <span>${value}</span>}
